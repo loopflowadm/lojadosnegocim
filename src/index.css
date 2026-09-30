@@ -1,0 +1,328 @@
+/* ==========================================================================
+   LOJA DOS NEGOCIM — DESIGN SYSTEM & TOKENS OFICIAIS
+   Baseado no design.md oficial da marca
+   ========================================================================== */
+
+:root {
+  /* Paleta Principal da Marca */
+  --color-primary: #FF6B35;
+  --color-primary-hover: #E85924;
+  --color-primary-active: #D34B19;
+  --color-primary-light: #FFF0EB;
+  --color-primary-subtle: #FFE4D9;
+
+  --color-secondary: #0D5C5B;
+  --color-secondary-dark: #073B3A;
+  --color-secondary-hover: #106E6D;
+  --color-secondary-light: #E6F2F2;
+
+  --color-accent-yellow: #FFB703;
+  --color-accent-yellow-light: #FFF8E6;
+
+  /* Universos / Categorias */
+  --color-cat-montar: #D9480F;
+  --color-cat-montar-bg: #FFE8CC;
+  --color-cat-geek: #2B6CB0;
+  --color-cat-geek-bg: #EBF8FF;
+  --color-cat-sensorial: #2A9D8F;
+  --color-cat-sensorial-bg: #E6FFFA;
+  --color-cat-pintar: #7B2CBF;
+  --color-cat-pintar-bg: #F3E8FF;
+  --color-cat-casa: #407B53;
+  --color-cat-casa-bg: #EBF5EE;
+  --color-cat-presentes: #E63946;
+  --color-cat-presentes-bg: #FFEBEB;
+
+  /* Neutros & Superfícies Acolhedoras */
+  --color-bg-main: #F9F8F5;
+  --color-bg-card: #FFFFFF;
+  --color-bg-subtle: #F2EFEB;
+  --color-bg-muted: #EBE7DF;
+
+  --color-border: #E5E1D8;
+  --color-border-strong: #CEC7B9;
+  --color-border-focus: #0D5C5B;
+
+  --color-text-main: #181C1D;
+  --color-text-muted: #576063;
+  --color-text-subtle: #8A9497;
+  --color-text-inverse: #FFFFFF;
+
+  /* Tipografia Oficial */
+  --font-display: 'Bricolage Grotesque', system-ui, -apple-system, sans-serif;
+  --font-body: 'Manrope', system-ui, -apple-system, sans-serif;
+
+  /* Raio de Bordas */
+  --radius-xs: 4px;
+  --radius-sm: 8px;
+  --radius-md: 12px;
+  --radius-lg: 18px;
+  --radius-xl: 24px;
+  --radius-full: 9999px;
+
+  /* Sombras Naturais e Físicas */
+  --shadow-xs: 0 1px 2px rgba(24, 28, 29, 0.04);
+  --shadow-sm: 0 2px 8px rgba(13, 92, 91, 0.06), 0 1px 2px rgba(0, 0, 0, 0.02);
+  --shadow-md: 0 10px 24px -4px rgba(13, 92, 91, 0.10), 0 4px 8px -2px rgba(0, 0, 0, 0.03);
+  --shadow-lg: 0 20px 35px -8px rgba(13, 92, 91, 0.16), 0 6px 14px -3px rgba(0, 0, 0, 0.05);
+  --shadow-cta: 0 8px 24px -4px rgba(255, 107, 53, 0.38);
+
+  /* Transições e Animações */
+  --transition-fast: 140ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-normal: 240ms cubic-bezier(0.16, 1, 0.3, 1);
+  --transition-smooth: 350ms cubic-bezier(0.16, 1, 0.3, 1);
+
+  /* Dimensões */
+  --container-max: 1200px;
+  --header-height: 80px;
+}
+
+/* Reset Global e Normalização */
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  font-family: var(--font-body);
+  color: var(--color-text-main);
+  background-color: var(--color-bg-main);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  scroll-behavior: smooth;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  overflow-x: hidden;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+svg {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+/* Ícones Phosphor Globais */
+.ph-icon, svg.ph {
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+button, input, select, textarea {
+  font: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+}
+
+button {
+  cursor: pointer;
+  user-select: none;
+}
+
+/* Tipografia Estruturada */
+h1, h2, h3, h4, h5, h6, .font-display {
+  font-family: var(--font-display);
+  font-weight: 800;
+  color: var(--color-text-main);
+  letter-spacing: -0.015em;
+  line-height: 1.22;
+  padding-bottom: 2px;
+}
+
+/* Layout Utilities */
+.container {
+  width: 100%;
+  max-width: var(--container-max);
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+@media (min-width: 768px) {
+  .container {
+    padding-left: 32px;
+    padding-right: 32px;
+  }
+}
+
+/* Botões do Design System */
+.btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 12px 22px;
+  font-family: var(--font-display);
+  font-weight: 700;
+  font-size: 0.95rem;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+  text-align: center;
+  white-space: nowrap;
+}
+
+.btn:active {
+  transform: scale(0.97);
+}
+
+.btn-primary {
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-cta);
+}
+
+.btn-primary:hover {
+  background-color: var(--color-primary-hover);
+  box-shadow: 0 10px 28px -2px rgba(255, 107, 53, 0.48);
+  transform: translateY(-1px);
+}
+
+.btn-secondary {
+  background-color: var(--color-secondary);
+  color: #FFFFFF;
+  box-shadow: var(--shadow-sm);
+}
+
+.btn-secondary:hover {
+  background-color: var(--color-secondary-hover);
+  transform: translateY(-1px);
+  box-shadow: var(--shadow-md);
+}
+
+.btn-outline {
+  background-color: transparent;
+  color: var(--color-text-main);
+  border: 1.5px solid var(--color-border-strong);
+}
+
+.btn-outline:hover {
+  background-color: var(--color-bg-subtle);
+  border-color: var(--color-text-main);
+}
+
+.btn-ghost {
+  background-color: transparent;
+  color: var(--color-text-main);
+}
+
+.btn-ghost:hover {
+  background-color: var(--color-bg-subtle);
+}
+
+.btn-icon {
+  width: 42px;
+  height: 42px;
+  padding: 0;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all var(--transition-fast);
+}
+
+.btn-icon:hover {
+  background-color: var(--color-bg-subtle);
+}
+
+/* Badges e Tags */
+.badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-family: var(--font-display);
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: var(--radius-sm);
+}
+
+.badge-orange {
+  background-color: var(--color-primary-light);
+  color: var(--color-primary-hover);
+  border: 1px solid var(--color-primary-subtle);
+}
+
+.badge-teal {
+  background-color: var(--color-secondary-light);
+  color: var(--color-secondary-dark);
+}
+
+.badge-yellow {
+  background-color: var(--color-accent-yellow-light);
+  color: #996400;
+  border: 1px solid rgba(255, 183, 3, 0.3);
+}
+
+.badge-green {
+  background-color: var(--color-cat-sensorial-bg);
+  color: #1a6d63;
+}
+
+/* Animações e Efeitos */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(8px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes pulseSubtle {
+  0%, 100% { transform: scale(1); }
+  50% { transform: scale(1.08); }
+}
+
+@keyframes slideInRight {
+  from { transform: translateX(100%); }
+  to { transform: translateX(0); }
+}
+
+.animate-fade-in {
+  animation: fadeIn 0.3s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.pulse-badge {
+  animation: pulseSubtle 2s infinite ease-in-out;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--color-bg-main);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--color-border-strong);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--color-text-subtle);
+}

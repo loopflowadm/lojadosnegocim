@@ -1,0 +1,233 @@
+.custom-idea-section {
+  padding: 60px 0;
+  background-color: var(--color-bg-main);
+}
+
+.custom-idea-card {
+  background: linear-gradient(135deg, #073B3A 0%, var(--color-secondary) 100%);
+  border-radius: var(--radius-xl);
+  padding: 44px 44px 44px 48px;
+  color: #FFFFFF;
+  display: grid;
+  grid-template-columns: 1.15fr 0.95fr;
+  align-items: stretch;
+  gap: 40px;
+  box-shadow: var(--shadow-lg);
+  position: relative;
+  overflow: hidden;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.custom-idea-content {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: center;
+}
+
+.idea-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  background-color: rgba(255, 183, 3, 0.2);
+  color: var(--color-accent-yellow);
+  padding: 6px 14px;
+  border-radius: var(--radius-full);
+  font-family: var(--font-display);
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  margin-bottom: 16px;
+  border: 1px solid rgba(255, 183, 3, 0.35);
+}
+
+.idea-title {
+  font-size: clamp(1.85rem, 3.2vw, 2.6rem);
+  font-weight: 900;
+  line-height: 1.15;
+  color: #FFFFFF;
+  margin-bottom: 16px;
+  letter-spacing: -0.02em;
+}
+
+.idea-title span {
+  color: var(--color-accent-yellow);
+}
+
+.idea-text {
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #E2E8F0;
+  max-width: 520px;
+  margin-bottom: 26px;
+}
+
+.idea-steps-row {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 14px;
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: rgba(255, 255, 255, 0.08);
+  padding: 16px;
+  border-radius: var(--radius-lg);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+}
+
+.idea-step-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 10px;
+}
+
+.step-number {
+  width: 26px;
+  height: 26px;
+  border-radius: var(--radius-full);
+  background-color: var(--color-primary);
+  color: #FFFFFF;
+  font-family: var(--font-display);
+  font-size: 0.85rem;
+  font-weight: 800;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.idea-step-item strong {
+  display: block;
+  font-size: 0.875rem;
+  color: #FFFFFF;
+  margin-bottom: 2px;
+}
+
+.idea-step-item p {
+  font-size: 0.75rem;
+  color: #CBD5E1;
+  line-height: 1.35;
+}
+
+/* Botões da Seção */
+.idea-action-box {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  flex-wrap: wrap;
+}
+
+.idea-cta-btn {
+  padding: 14px 26px;
+  font-size: 1rem;
+  font-family: var(--font-display);
+  font-weight: 800;
+  box-shadow: 0 8px 24px -2px rgba(255, 107, 53, 0.45);
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.idea-cta-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 12px 28px -2px rgba(255, 107, 53, 0.55);
+}
+
+.idea-whatsapp-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  background-color: rgba(255, 255, 255, 0.12);
+  color: #FFFFFF;
+  border: 1.5px solid rgba(255, 255, 255, 0.35);
+  padding: 14px 22px;
+  font-family: var(--font-display);
+  font-size: 0.95rem;
+  font-weight: 700;
+  border-radius: var(--radius-md);
+  transition: all var(--transition-fast);
+}
+
+.idea-whatsapp-btn:hover {
+  background-color: rgba(255, 255, 255, 0.22);
+  border-color: #FFFFFF;
+  transform: translateY(-2px);
+}
+
+.text-whatsapp-green {
+  color: #25D366;
+  filter: drop-shadow(0 0 4px rgba(37, 211, 102, 0.4));
+}
+
+/* Coluna Visual que Preenche Altura Total */
+.custom-idea-visual {
+  position: relative;
+  display: flex;
+  height: 100%;
+  min-height: 380px;
+}
+
+.idea-visual-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  box-shadow: 0 20px 40px -8px rgba(0, 0, 0, 0.4);
+  border: 2px solid rgba(255, 255, 255, 0.2);
+}
+
+.idea-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform var(--transition-smooth);
+}
+
+.custom-idea-card:hover .idea-img {
+  transform: scale(1.03);
+}
+
+/* Badges Flutuantes */
+.idea-floating-badge {
+  position: absolute;
+  background-color: #FFFFFF;
+  color: var(--color-secondary-dark);
+  font-family: var(--font-display);
+  font-weight: 800;
+  font-size: 0.8rem;
+  padding: 8px 14px;
+  border-radius: var(--radius-full);
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  box-shadow: var(--shadow-lg);
+  z-index: 3;
+}
+
+.badge-1 {
+  top: 14px;
+  right: 14px;
+}
+
+.badge-2 {
+  bottom: 14px;
+  left: 14px;
+}
+
+/* Responsivo */
+@media (max-width: 992px) {
+  .custom-idea-card {
+    grid-template-columns: 1fr;
+    padding: 36px 24px;
+  }
+
+  .custom-idea-visual {
+    display: none !important;
+  }
+
+  .idea-steps-row {
+    grid-template-columns: 1fr;
+    gap: 12px;
+  }
+}

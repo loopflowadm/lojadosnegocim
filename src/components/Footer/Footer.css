@@ -1,0 +1,237 @@
+.site-footer {
+  background-color: #141718;
+  color: #FFFFFF;
+  margin-top: auto;
+}
+
+/* Benefícios */
+.footer-benefits-bar {
+  background-color: var(--color-secondary-dark);
+  padding: 36px 0;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-benefits-grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+}
+
+.benefit-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+}
+
+.benefit-icon-box {
+  width: 54px;
+  height: 54px;
+  border-radius: var(--radius-md);
+  background-color: rgba(255, 255, 255, 0.1);
+  color: var(--color-primary);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-shrink: 0;
+}
+
+.benefit-item strong {
+  display: block;
+  font-size: 0.95rem;
+  color: #FFFFFF;
+  margin-bottom: 3px;
+}
+
+.benefit-item p {
+  font-size: 0.8rem;
+  color: #A3B8B8;
+  line-height: 1.4;
+}
+
+/* Main Footer */
+.footer-main {
+  padding: 60px 0 40px 0;
+}
+
+.footer-main-grid {
+  display: grid;
+  grid-template-columns: 1.4fr 1fr 1fr 1.1fr;
+  gap: 40px;
+}
+
+.footer-col-about {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.footer-logo-wrap {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  background-color: transparent;
+  padding: 0;
+  width: fit-content;
+}
+
+.footer-logo-svg {
+  height: 48px;
+  width: auto;
+  display: block;
+}
+
+.footer-about-text {
+  font-size: 0.875rem;
+  color: #9CA3AF;
+  line-height: 1.6;
+  margin-bottom: 20px;
+  max-width: 320px;
+}
+
+.footer-socials {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.social-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: #D1D5DB;
+  transition: color var(--transition-fast);
+}
+
+.social-btn:hover {
+  color: var(--color-primary);
+}
+
+.footer-col-title {
+  font-size: 1rem;
+  font-weight: 800;
+  color: #FFFFFF;
+  margin-bottom: 18px;
+}
+
+.footer-nav-list {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.footer-nav-list button,
+.footer-nav-list a {
+  font-size: 0.85rem;
+  color: #9CA3AF;
+  text-align: left;
+  transition: color var(--transition-fast);
+}
+
+.footer-nav-list button:hover,
+.footer-nav-list a:hover {
+  color: #FFFFFF;
+}
+
+.footer-highlight-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--color-accent-yellow) !important;
+  font-weight: 700;
+}
+
+/* Pagamentos */
+.payment-badges-grid {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  margin-bottom: 20px;
+}
+
+.pay-badge {
+  display: inline-block;
+  background-color: rgba(255, 255, 255, 0.06);
+  padding: 6px 12px;
+  border-radius: var(--radius-sm);
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #E5E7EB;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.footer-trust-badge {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.8rem;
+  color: #9CA3AF;
+  padding-top: 12px;
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.trust-icon {
+  color: #10B981;
+}
+
+/* Rodapé Bottom */
+.footer-bottom {
+  border-top: 1px solid rgba(255, 255, 255, 0.08);
+  padding: 20px 0;
+  background-color: #0E1011;
+}
+
+.footer-bottom-content {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 12px;
+}
+
+.footer-copy-text {
+  font-size: 0.8rem;
+  color: #6B7280;
+}
+
+.footer-made-in {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8rem;
+  color: #9CA3AF;
+  font-weight: 600;
+}
+
+.heart-icon-footer {
+  color: #EF4444;
+  fill: #EF4444;
+}
+
+@media (max-width: 1024px) {
+  .footer-benefits-grid {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .footer-main-grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+@media (max-width: 640px) {
+  .footer-benefits-grid {
+    grid-template-columns: 1fr;
+  }
+
+  .footer-main-grid {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  .footer-bottom-content {
+    flex-direction: column;
+    text-align: center;
+  }
+}
